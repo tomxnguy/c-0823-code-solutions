@@ -5,7 +5,7 @@ const orderHistory = [
     totalCost: 34.0,
     shipTo: 'JS Mash',
     returnBy: 'September 7, 2020',
-    itemsOrdered: 'JavaScript for impatient programmers',
+    itemsOrdered: ['JavaScript for impatient programmers'],
   },
   {
     orderNumber: '113-9984268-1280257',
@@ -13,7 +13,7 @@ const orderHistory = [
     totalCost: 44.53,
     shipTo: 'JS Mash',
     returnBy: 'August 19, 2020',
-    itemsOrdered: 'The Timeless Way of Building',
+    itemsOrdered: ['The Timeless Way of Building'],
   },
   {
     orderNumber: '114-2875557-9059409',
@@ -21,8 +21,9 @@ const orderHistory = [
     totalCost: 17.22,
     shipTo: 'JS Mash',
     returnBy: 'August 5, 2020',
-    itemsOrdered:
+    itemsOrdered: [
       'Gamecube Controller Adapter. Super Smash Bros Switch     Gamecube Adapter for Wii U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
+    ],
   },
   {
     orderNumber: '113-2883177-2648248',
