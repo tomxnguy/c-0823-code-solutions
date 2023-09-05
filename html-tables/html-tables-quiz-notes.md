@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What are the six primary HTML elements for creating tables?
-  table, tr, td, th, col, colgroup
+  table, tr, td, th, thead, tbody
 
 - What purpose do the `thead` and `tbody` elements serve?
   thead elements define a set of rows definind the head of the columns in the table. tbody is a set of table rows that shows the set of table rows containing <tr> elements.
