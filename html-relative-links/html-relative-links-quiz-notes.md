@@ -8,13 +8,13 @@ After completing this exercise, you should be able to discuss or answer the foll
   ../
 
 - How do you indicate the relative link to a child directory?
-  the linking file is the file name with a (/).
+  The linking file is the file name with a (/).
 
 - How do you indicate the relative link to a grand parent directory?
   ../../
 
 - How do you indicate the relative link to the same directory?
-  the linking file is in the relative url.
+  The linking file is in the relative url.
 
 ## Notes
 
