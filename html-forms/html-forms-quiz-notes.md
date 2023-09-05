@@ -11,10 +11,10 @@ After completing this exercise, you should be able to discuss or answer the foll
   fieldset, legend, textarea, label, button
 
 - Give three examples of `type` attribute values for HTML `<input>` elements.
-  text, radio, button
+  text, radio, email
 
 - Is an HTML `<input>` element a block element or an inline element?
-  block element
+  inline block element
 
 ## Notes
 
