@@ -9,11 +9,11 @@
   color: white;
 }
 
-thead {
+table.striped > thead > tr {
   background-color: black;
   color: white;
 }
 
-tbody:nth-child(even) {
+table.striped > tbody > tr:nth-child(odd) {
   background-color: lightgray;
 }
