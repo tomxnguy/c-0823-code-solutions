@@ -1,0 +1,19 @@
+.imAButton {
+  width: 250px;
+  height: 90px;
+  font-size: x-large;
+}
+
+.imAButton:hover {
+  background-color: black;
+  color: white;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+tbody:nth-child(even) {
+  background-color: lightgray;
+}
