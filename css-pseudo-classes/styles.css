@@ -1,0 +1,19 @@
+.imAButton {
+  width: 250px;
+  height: 90px;
+  font-size: x-large;
+}
+
+.imAButton:hover {
+  background-color: black;
+  color: white;
+}
+
+table.striped > thead > tr {
+  background-color: black;
+  color: white;
+}
+
+table.striped > tbody > tr:nth-child(odd) {
+  background-color: lightgray;
+}
