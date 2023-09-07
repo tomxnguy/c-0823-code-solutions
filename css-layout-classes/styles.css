@@ -1,0 +1,29 @@
+* {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+img {
+  width: 100%;
+}
+
+.column-two-thirds {
+  width: 35%;
+}
+
+.column-one-half {
+  width: 75%;
+}
+
+#mario {
+  flex-direction: row-reverse;
+}
