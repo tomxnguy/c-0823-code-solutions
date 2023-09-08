@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Challenge - Brochure Form</title>
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>LEARN MORE</h1>
+
+    <form class="learnForm">
+      <div class="learnForm">
+        <label for="email" class="heading">COMPANY EMAIL</label>
+      </div>
+      <div class="learnForm">
+        <input
+          type="email"
+          class="input"
+          id="email"
+          placeholder="sally@company.co"
+          required />
+      </div>
+
+      <div class="learnForm">
+        <label for="username" class="heading">NAME</label>
+      </div>
+      <div class="learnForm">
+        <input
+          type="text"
+          class="input"
+          id="username"
+          placeholder="Sally Smith" />
+      </div>
+
+      <div class="learnForm">
+        <label for="where" class="heading">WHERE ARE YOU HIRING?</label>
+      </div>
+      <div class="learnForm">
+        <input
+          type="text"
+          class="input"
+          id="where"
+          placeholder="City, Country" />
+      </div>
+
+      <div class="learnForm">
+        <label for="how-many" class="heading"
+          >HOW MANY ENGINEERS ARE YOU HIRING IN THE NEXT 6 MONTHS?</label
+        >
+      </div>
+      <div class="learnForm">
+        <select name="how-many" class="input" id="select">
+          <option id="1-2" class="select">1-2 Engineers</option>
+          <option id="3-4" class="select">3-4 Engineers</option>
+          <option id="5-6" class="select">5-6 Engineers</option>
+        </select>
+      </div>
+
+      <div><input class="submit" type="submit" value="SUBMIT" /></div>
+    </form>
+  </body>
+</html>
