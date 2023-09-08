@@ -14,16 +14,21 @@
 
 img {
   width: 100%;
+  height: auto;
+}
+
+.column-third {
+  width: calc(100% / 3);
+}
+
+.column-quarter {
+  width: calc(100% / 3);
+}
+
+.column-one-third {
+  width: 25%;
 }
 
 .column-two-thirds {
-  width: 35%;
-}
-
-.column-one-half {
   width: 75%;
-}
-
-#mario {
-  flex-direction: row-reverse;
 }
