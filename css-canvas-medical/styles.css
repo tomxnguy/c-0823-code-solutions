@@ -1,0 +1,50 @@
+body {
+  font-family: 'Avenir.woff2', sans-serif;
+}
+
+.navigation-bar {
+  display: flex;
+  border: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-color: gray;
+  margin: 30px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  justify-content: space-between;
+}
+
+.nav-bar-links > a {
+  text-decoration: none;
+  color: gray;
+}
+
+.nav-bar-links {
+  display: inline;
+  list-style: none;
+  padding: 20px;
+}
+
+.contact-us-button {
+  width: 120px;
+  height: 40px;
+  color: white;
+  background-color: rgb(6, 34, 94);
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+}
+
+.get-started-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  background-image: url('./images/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.get-started-content {
+  justify-content: space-between;
+}
