@@ -1,0 +1,65 @@
+body {
+  font-family: Karla, sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.container {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-size: 40pt;
+  font-weight: bold;
+  margin-top: 35px;
+  margin-bottom: 10px;
+  margin-left: 180px;
+}
+
+.mission-statement {
+  max-width: 700px;
+  margin-left: 100px;
+  line-height: 30pt;
+  text-align: center;
+}
+
+.column {
+  flex-wrap: wrap;
+}
+
+.column-half {
+  margin-right: 0;
+}
+
+.heading {
+  align-items: right;
+  flex-basis: auto;
+  margin-right: 40px;
+}
+
+.explanation {
+  line-height: 25pt;
+  margin-left: 150px;
+}
+
+.image {
+  float: left;
+  margin-bottom: 80px;
+}
+
+.learn-more {
+  padding-left: 400px;
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  background-color: white;
+  color: red;
+  border-color: red;
+  align-items: center;
+}
