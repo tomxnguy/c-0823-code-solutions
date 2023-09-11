@@ -20,15 +20,9 @@ body {
   color: gray;
 }
 
-.nav-bar-links {
-  display: inline;
-  list-style: none;
-  padding: 20px;
-}
-
-.contact-us-button {
+#contact-us-button {
   width: 120px;
-  height: 40px;
+  height: 30px;
   color: white;
   background-color: rgb(6, 34, 94);
   border-radius: 5px;
@@ -36,15 +30,69 @@ body {
   font-size: 18px;
 }
 
+.nav-bar-links {
+  display: inline;
+  list-style: none;
+  padding: 20px;
+}
+
 .get-started-container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
-  background-image: url('./images/hero.jpg');
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 95%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./images/hero.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
+  justify-content: start;
+  padding-left: 50px;
+  padding-right: 410px;
+  padding-top: 60px;
 }
 
 .get-started-content {
   justify-content: space-between;
+}
+
+.get-started-head {
+  font-family: 'TiemposHeadline-LightItalic.woff2', serif;
+  font-style: normal;
+  color: white;
+  font-size: large;
+  font-weight: 100;
+}
+
+.get-started-paragraph {
+  color: white;
+  line-height: 25px;
+  font-weight: 200;
+  padding-right: ;
+}
+
+.button-styling {
+  height: 40px;
+  width: 150px;
+  background-color: rgb(0, 76, 139);
+  color: white;
+  font-family: 'Avenir.woff2', sans-serif;
+  font-weight: 100;
+  border-radius: 8px;
+  border-color: none;
+  border-style: none;
+}
+
+.get-started-button {
+  padding-bottom: 80px;
+  padding-top: 20px;
+}
+
+.clinicians-prefer-container {
+  background-color: rgba(211, 211, 211, 0.619);
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.clinicians-prefer-row {
+  flex-direction: row;
+  align-items: center;
 }
