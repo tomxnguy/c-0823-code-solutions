@@ -1,0 +1,36 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: beige;
+  height: 100vh;
+}
+
+.switch {
+  height: 300px;
+  width: 300px;
+  background-color: rgba(255, 255, 0, 0.602);
+  box-shadow: 5px 5px 30px 5px rgb(255, 248, 34);
+  border-radius: 100%;
+}
+
+.container.dark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  height: 100vh;
+}
+
+.switch.dark {
+  height: 300px;
+  width: 300px;
+  background-color: rgb(39, 35, 35);
+  box-shadow: 5px 5px 30px 5px rgb(58, 58, 54);
+  border-radius: 100%;
+}
