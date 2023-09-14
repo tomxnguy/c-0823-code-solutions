@@ -5,10 +5,10 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is the `event.target`?
-  a propert that is a reference to the object of which event was dispatched. it can be used to implement event delegation.
+  a propert that is a reference to the object of which event was dispatched. it can be used to implement event delegation. whatever element that was
 
 - Why is it possible to listen for events on one element that actually happen its descendent elements?
-  event delegation finds a match on child elements.
+  due to event bubbling
 
 - What DOM element property tells you what type of element it is?
   tagName property
