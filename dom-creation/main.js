@@ -75,31 +75,32 @@ function renderPokemon(pokemon) {
   $pokemonCard.setAttribute('class', 'pokemon-card');
   $columnThird.appendChild($pokemonCard);
 
-  const $pikachuImg = document.createElement('img');
-  $pikachuImg.setAttribute('src', 'images/pikachu.png');
-  $pokemonCard.appendChild($pikachuImg);
+  const $pokemonImg = document.createElement('img');
+  $pokemonImg.setAttribute('src', pokemon.imageUrl);
+  $pokemonCard.appendChild($pokemonImg);
 
   const $pokemonText = document.createElement('div');
   $pokemonText.setAttribute('class', 'pokemon-card-text');
   $pokemonCard.appendChild($pokemonText);
 
-  const $hTwo = document.createElement('h2');
-  const $pikachuText = document.createTextNode('Pikachu');
-  $hTwo.appendChild($pikachuText);
-  $pokemonText.appendChild($hTwo);
+  const $name = document.createElement('h2');
+  $name.$pokemonText = pokemon.name;
+  $pokemonText.appendChild($name);
 
-  const $hThree = document.createElement('h3');
-  const $twentyFive = document.createTextNode('#025');
-  $hThree.appendChild($twentyFive);
-  $pokemonText.appendChild($hThree);
+  const $number = document.createElement('h3');
+  $number.textContent = '#' + pokemon.number;
+  $pokemonText.appendChild($number);
 
-  const $pikaP = document.createElement('p');
-  const $pikaExplained = document.createTextNode(
-    'Pikachu that can generate powerful electricity have cheek sacs'
-  );
-  $pikaP.appendChild($pikaExplained);
-  $pokemonText.appendChild($pikaP);
+  const $description = document.createElement('p');
+  $description.textContent = pokemon.description;
+  $pokemonText.appendChild($description);
+
   return $columnThird;
 }
 
-console.log(renderPokemon(pokedex[0]));
+const $row = document.querySelector('.row');
+
+for (let i = 0; i < pokedex.length; i++) {
+  const $pokemon = renderPokemon(pokedex[i]);
+  $row.appendChild($pokemon);
+}
