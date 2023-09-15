@@ -22,7 +22,7 @@ const stringify = JSON.stringify(arr);
 console.log(stringify);
 console.log('JSON type of: ', typeof stringify);
 
-const newString = '{"id":"12345", "name":"Thomas"}';
+const newString = '{"id":12345, "name":"Thomas"}';
 console.log('newString: ', newString);
 console.log('newString typeof: ', typeof newString);
 
