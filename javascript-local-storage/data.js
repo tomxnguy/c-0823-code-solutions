@@ -1,9 +1,12 @@
 /* exported todos */
 
-// let todos = [];
+let todos = [];
 
 const previousTodosJSON = localStorage.getItem('javascript-local-storage');
-let todos = JSON.parse(previousTodosJSON);
+
+if (previousTodosJSON !== null) {
+  todos = JSON.parse(previousTodosJSON);
+}
 
 window.addEventListener('beforeunload', beforeUnload);
 
