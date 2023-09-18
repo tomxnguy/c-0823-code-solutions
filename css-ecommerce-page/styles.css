@@ -1,0 +1,58 @@
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.container {
+  margin-left: 120px;
+  margin-right: auto;
+  width: 800px;
+}
+
+.heading-container {
+  text-align: center;
+  margin-left: 480px;
+}
+
+.row {
+  display: flex;
+  flex-basis: calc(100% / 5);
+}
+
+.column-fifth {
+  margin-right: 15px;
+}
+
+.item-img {
+  height: auto;
+  width: auto;
+}
+
+.item-row {
+  display: flex;
+  height: 35px;
+}
+
+.price-row {
+  display: flex;
+}
+
+img {
+  width: 250px;
+  height: 400px;
+  object-fit: contain;
+}
+
+.item-size {
+  color: rgb(171, 169, 169);
+  margin-left: 5px;
+}
+
+.old-price {
+  color: rgb(171, 169, 169);
+  padding-top: 16px;
+  margin-left: 5px;
+}
+
+.new-price > p {
+  background-color: rgba(255, 166, 2, 0.833);
+}
