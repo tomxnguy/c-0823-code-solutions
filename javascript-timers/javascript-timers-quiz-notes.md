@@ -17,7 +17,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   0
 
 - What do `setTimeout()` and `setInterval()` return?
-  a timeoutID which is a positive integer in setTimeout. and numeric non-zero value in setInterval
+  a timeoutID which is a positive integer in setTimeout. and numeric non-zero value in setInterval.
 
 ## Notes
 
