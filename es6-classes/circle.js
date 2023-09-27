@@ -3,10 +3,11 @@
 class Circle extends Shape {
   constructor(radius) {
     super(Math.PI * radius * radius, 2 * Math.PI * radius);
+    this.radius = radius;
   }
 
   describe() {
-    return `The circles area is ${this.area} and the circles perimeter is ${this.perimeter}.`;
+    return `${super.describe()}, Radius:${this.radius}`;
   }
 }
 

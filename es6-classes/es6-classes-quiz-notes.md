@@ -14,10 +14,13 @@ After completing this exercise, you should be able to discuss or answer the foll
   With a class declaration followed by the class body.
 
 - How do you inherit from another class?
+  Extends keyword.
 
 - Why would you want to inherit from another class?
+  code can be more reusable.
 
 - How do you add methods and properties to a class?
+  You can add it in the constructor and create the methods in the class body.
 
 ## Notes
 
