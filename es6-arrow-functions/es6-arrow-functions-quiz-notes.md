@@ -20,19 +20,19 @@ After completing this exercise, you should be able to discuss or answer the foll
   ```
 
   - Identify the arrow function
-    function()
+    () => 42
 
   - How many arguments does the arrow function take?
     0
 
   - What value does it return?
-    no value is returned
+    42
 
   - How many arguments are passed to the function `foo`?
-    0
+    1
 
   - What type of argument is passed to the function `foo`?
-    no arguments. it is anonymous.
+    callback function
 
 - In the expression
 
@@ -43,25 +43,27 @@ After completing this exercise, you should be able to discuss or answer the foll
   ```
 
   - Identify the arrow function
-    function(y)
+    (y) => {
+    console.log(`4y = ${4 * y}`);
+    }
 
   - How many arguments does the arrow function take?
     1
 
   - What value does it return?
-    y
+    undefined. returns nothing
 
   - How many arguments are passed to the function `bar`?
     1
 
   - What type of argument is passed to the function `bar`?
-    a variable y
+    callback function
 
   - When does the arrow function's code get executed?
-    When the expression finishes evaluating in the console.log.
+    when the bar function is called.
 
 - How does the value of `this` differ between standard functions and arrow functions?
-  In standard functions 'this' is defined by calling the object. In arrow functions it is taken from a lexical scope.
+  In standard functions 'this' is defined by calling the object. In arrow functions do not bind this keyword
 
 ## Notes
 
