@@ -5,12 +5,16 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - `Array.forEach`:
+
   - What does `Array.forEach` do?
     executes a function for each array element.
+
   - What should the callback function do?
     executes a function for each element in the array.
+
   - What is `Array.forEach` useful for?
     looping over an array and modifying the array by performing an action.
+
 - `Array.map`:
   - What does `Array.map` do?
     creates a new array with result of calling a function on every element in the calling array.

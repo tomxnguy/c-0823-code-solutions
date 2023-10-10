@@ -13,7 +13,6 @@ const names = [
 ];
 
 const even = numbers.filter((n) => n % 2 === 0);
-
 console.log('even numbers', even);
 
 const noDs = names.filter((n) => !n.includes('d') && !n.includes('D'));
