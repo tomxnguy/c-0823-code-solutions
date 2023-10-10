@@ -13,6 +13,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 Object destructuring can be done on left hand side of the assignment. The identifier of before the colon is the property of the object and the identifier after the colon is the variable.
 
 - What is the syntax for `Array` destructuring?
+  const, square brackets with varibales, assignment operator
   The syntax looks similar to array literals. The array literal on the left hand side of the assignments uses its position to extract data.
 
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
