@@ -1,0 +1,20 @@
+{
+  "name": "npm-intro",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "server.js",
+  "keywords": [
+    "react"
+  ],
+  "author": "\"Thomas Nguyen\"",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.51.0"
+  },
+  "scripts": {
+    "hello": "echo Hello, LearningFuze"
+  }
+}
