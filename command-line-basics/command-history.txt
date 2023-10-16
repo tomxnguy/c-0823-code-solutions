@@ -1,0 +1,500 @@
+  104  git add javascript-timers/
+  105  git commit -m "Completed javascript-timers exercise." 
+  106  git push origin main
+  107  git add javascript-timers/
+  108  git commit -m "Completed javascript-timers exercise."
+  109  git push origin main
+  110  git push origin main
+  111  git add javascript-timers/
+  112  git commit -m "Completed javascript-timers exercise."
+  113  git push origin main 
+  114  git switch main
+  115  git pull origin main
+  116  git switch javascript-timers
+  117  git add javascript-timers
+  118  git commit -m "Completed javascript-timers exercise."
+  119  git push origin main 
+  120  git push javascript-timers/
+  121  git add javascript-timers/
+  122  git commit -m "Completed javascript-timers exercise."
+  123  git push javascript-timers/
+  124  git add javascript-timers/
+  125  git commit -m "Completed javascript-timers exercise."
+  126  git push origin javascript-timers 
+  127  git switch main
+  128  git pull origin main 
+  129  git branch javascript-carousel
+  130  git switch javascript-carousel 
+  131  git add javascript-carousel
+  132  git commit -m "updated javascript-carousel-exercise."
+  133  git commit -m "javascript carousel exercise."
+  134  git commit -m "javascript carousel"
+  135  git switch main
+  136  git pull origin ,ain
+  137  git pull origin main
+  138  git branch http-messages
+  139  git switch http-messages
+  140  http http://example.com
+  141  http --verbose http://www.example.com
+  142  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  143  http --body GET https://example.com > http-messages/index.html
+  144  git add http-messages
+  145  git commit -m "Completed http-messages exercise."
+  146  git push origin http-messages
+  147  git switch main
+  148  git pull origin main
+  149  git switch javascript-carousel
+  150  git commit -m "saved carousel exercise."
+  151  git commit -m "saved javascript carousel"
+  152  git commit -m "javascript carousel exercise save."
+  153  git add javascript-carousel
+  154  git commit -m "carousel save."
+  155  git commit -m "carousel save"
+  156  git commit -m "carousel save"
+  157  git commit -m "carousel save"
+  158  git switch main
+  159  git pull origin main
+  160  git switch http-messages
+  161  git commit -m "Completed http-messages exercise."
+  162  git push http-messages/
+  163  git push origin http-messages 
+  164  git switch main
+  165  git pull origin main
+  166  git switch javascript-carousel
+  167  git commit -m "carousel save"
+  168  git add javascript-carousel
+  169  git commit -m "carousel save"
+  170  git commit -m "carousel save."
+  171  git commit -m "carousel save"
+  172  git switch ain
+  173  git switch main
+  174  git pull origin main
+  175  git switch main
+  176  git pull origin main
+  177  git branch javascript-new
+  178  git switch javascript-new
+  179  git add javascript-new
+  180  git commit -m "Completed javascript-new exercise."
+  181  git push origin javascript-new 
+  182  git add javascript-new/
+  183  git commit -m "Added quiz questions javascript-new"
+  184  git push javascript-new/
+  185  git push origin javascript-new 
+  186  git switch main
+  187  git pull origin main
+  188  git branch es6-classes
+  189  git switch es6-classes 
+  190  git add es6-classes/
+  191  git commit -m "es6-classes save"
+  192  git add es6-classes
+  193  git commit -m "Completed es6-classes-exercise."
+  194  git push origin es6-classes
+  195  git switch main
+  196  git pull origin main
+  197  git branch javascript-ajax
+  198  git switch javascript-ajax 
+  199  git add javascript-ajax/
+  200  git commit -m "Completed javascript-ajax exercise."
+  201  git push origin javascript-ajax 
+  202  git switch main
+  203  git pull origin main
+  204  git status
+  205  git pull origin main
+  206  git switch javascript-ajax
+  207  https://api.magicthegathering.io/v1/cards
+  208  https://api.magicthegathering.io/v1/cards
+  209  http https://api.magicthegathering.io/v1/cards
+  210  http --body https://api.magicthegathering.io/v1/cards > javascript-ajax/cards.json
+  211  http --body https://api.magicthegathering.io/v1/sets > javascript-ajax/cards.json
+  212  http --body https://api.magicthegathering.io/v1/cards > javascript-ajax/cards.json
+  213  λ http --body https://api.magicthegathering.io/v1/sets > javascript-ajax/sets.json
+  214  http --body https://api.magicthegathering.io/v1/sets > javascript-ajax/sets.json
+  215  http  https://api.magicthegathering.io/v1/cards?set=mid
+  216  http --body GET https://api.magicthegathering.io/v1/cards?set=mid > javascript-ajax/midset.json
+  217  http --body GET https://api.magicthegathering.io/v1/cards?set=mid&colorIdentity="W" > javascript-ajax/midset.json
+  218  http --body GET https://api.magicthegathering.io/v1/cards?set=mid > javascript-ajax/midset.json
+  219  http --body GET https://api.magicthegathering.io/v1/cards?set=mid?colorIdentity="W' > javascript-ajax/midsetwhiteid.json
+  220  "
+  221  http --body GET https://api.magicthegathering.io/v1/cards?set=mid?colorIdentity="W" > javascript-ajax/midsetwhiteid.json
+  222  http --body GET https://api.magicthegathering.io/v1/cards?set=mid?colorIdentity=white > javascript-ajax/midsetwhiteid.json
+  223  http --body GET https://api.magicthegathering.io/v1/cards?set=mid?coloridentity=white > javascript-ajax/midsetwhiteid.json
+  224  http --body GET https://api.magicthegathering.io/v1/cards?set=mid?colors=white > javascript-ajax/midsetwhiteid.json
+  225  http --body GET https://api.magicthegathering.io/v1/cards?set=mid&colors=white > javascript-ajax/midsetwhiteid.json
+  226  http --body GET https://api.magicthegathering.io/v1/cards?set=mid&colors=white > javascript-ajax/midsetwhiteid.json
+  227  http --body GET https://api.magicthegathering.io/v1/cards?set=mid&type=creature > javascript-ajax/midsetcreature.json
+  228  clear
+  229  http --verbose https://api.magicthegathering.io/v1/cards?set=mid
+  230  http https://api.magicthegathering.io/v1/cards?type=mid&colors=white
+  231  http --body GET https://api.magicthegathering.io/v1/cards?type=mid&colors=white > javascript-ajax/midwhite.json
+  232  git switch main
+  233  git pull origin main
+  234  git branch es6-destructuring
+  235  git switch es6-destructuring
+  236  git add es6-destructuring/
+  237  git commit -m "Completed es6-destructuring exercise."
+  238  git push origin es6-destructuring 
+  239  cd ..
+  240  git switch main
+  241  git pull origin main
+  242  git branch es6-arrow-functions
+  243  git switch es6-arrow-functions 
+  244  git add es6-arrow-functions/
+  245  git commit -m "Completed es6-arrow-functions exercise."
+  246  git push origin es6-arrow-functions 
+  247  git add es6-arrow-functions/
+  248  git commit -m "fixed es6-arrow-functions quiz answers" 
+  249  git push origin es6-arrow-functions 
+  250  git branch objects-revisited
+  251  git switch main
+  252  git pull origin main
+  253  git switch objects-revisited 
+  254  git switch es6-arrow-functions 
+  255  git push origin es6-destructuring 
+  256  git switch es6-destructuring 
+  257  git push origin es6-destructuring 
+  258  git commit -m "fixed destructuring quiz answers"
+  259  git add es6-destructuring/
+  260  git commit -m "es6-destructuring quiz answers"
+  261  git push origin es6-destructuring 
+  262  git switch es6-a
+  263  git switch es6-arrow-functions 
+  264  git add es6-arrow-functions/
+  265  git commit -m "fixed arrow functions answers"
+  266  git switch objects-revisited 
+  267  git switch main
+  268  git pull origin main
+  269  git switch objects-revisited 
+  270  git add objects-revisited
+  271  git commit -m "Objects-revisited save"
+  272  git branch array-methods
+  273  git switch array-methods
+  274  git add array-methods
+  275  git commit -m "Completed array-methods exercise."
+  276  git push origin array-methods 
+  277  git add array-methods
+  278  git commit -m "Completed array-methods exercise."
+  279  git add array-methods
+  280  git commit -m "Completed array-methods exercise."
+  281  git push origin array-methods
+  282  git add array-methods
+  283  git commit -m "Completed array-methods exercise."
+  284  git push origin array-methods 
+  285  git switch ain
+  286  git switch main
+  287  git pull origin main
+  288  git branch es6-operators
+  289  git switch es6-operators 
+  290  git switch main
+  291  git pull origin main
+  292  git switch array-methods
+  293  git switch main
+  294  git pull origin main
+  295  git switch es6-operators 
+  296  git add es6-operators/
+  297  git commit -m "Completed es6-operators exercise."
+  298  git push origin es6-operators 
+  299  git switch main
+  300  git pull origin main
+  301  git branch npm-intro
+  302  git switch npm-intro
+  303  cd npm-intro
+  304  cp .npm-init.js ~/.npm-init.js
+  305  cd /path/to/package
+  306  cd /path/to/package
+  307  cd /path/to/package
+  308  cd /path/to/package
+  309  npm init
+  310  npm init
+  311  npm init --yes
+  312  npm install jquery
+  313  npm install --save-dev
+  314  npm install --save-deveslint
+  315  npm install eslint  --save-dev
+  316  npm run hello
+  317  nmp run hello
+  318  nmp run hello
+  319  nmp run hello
+  320  nmp run hello
+  321  nmp run hello
+  322  nmp run hello
+  323  cd ..
+  324  git switch main
+  325  git pull origin main
+  326  git branch big-o-notation
+  327  git switch big-o-notation 
+  328  git add big-o-notation/
+  329  git commit -m "Completed big-o-notation exercise."
+  330  git push origin big-o-notation 
+  331  git switch main
+  332  git pull origin main
+  333  git switch npm-intro 
+  334  cp .npm-init.js ~/.npm-init.js
+  335  cd npm-intro
+  336  cp .npm-init.js ~/.npm-init.js
+  337  npm init --yes
+  338  npm run hello 
+  339  cd ..
+  340  git add npm-intro/
+  341  git commit -m "Completed npm-intro exercise."
+  342  git push origin npm-intro 
+  343  git switch main
+  344  git pull origin main
+  345  git switch big-o-notation 
+  346  git add big-o-notation/
+  347  git commit -m "Completed big-o-notation exercise."
+  348  git push origin big-o-notation 
+  349  git switch main
+  350  git pull origin main
+  351  git branch array-methods 
+  352  git switch array-methods 
+  353  git status
+  354  git switch main
+  355  git pull origin main
+  356  git switch array-methods 
+  357  git add array-methods/
+  358  ggit switch main
+  359  git switch main
+  360  git pull origin main
+  361  git switch npm-intro 
+  362  git add npm-intro
+  363  git commit-m "Updated npm-intro with quiz answers."
+  364  git commit -m "Updated npm intro exercise."
+  365  git push origin npm-intro 
+  366  git switch main
+  367  git pull origin main
+  368  git branch webpack-and-babel
+  369  git switch webpack-and-babel 
+  370  cd webpack-and-babel
+  371  file : import f1 from '/foo/bar/baz/qux.js';
+  372  file:import f1 from '/fixme1.js';
+  373  import f1 from '/fixme1.js'
+  374  import f1 from '/path/to/foo'
+  375  file:import f1 from '/path/foo/bar/baz/qux';
+  376  import f1 from 'path/fixme1'
+  377  import f1 from '/fixme/foo';
+  378  file:import f1 from 'fixme1/foo/bar/qux.js';
+  379  import f1 from '/fixme1/foo/bar/qux.js';
+  380  clear
+  381  cd ..
+  382  git add webpack-and-babel/
+  383  git commit -m "Completed webpack-and-babel exerise."
+  384  git push origin webpack-and-babel 
+  385  git switch main
+  386  git pull origin main
+  387  git branch reach-intro
+  388  git branch react-intro
+  389  status
+  390  git status
+  391  git switch react-intro
+  392  cd react-intro
+  393  npm create vite@latest my-app -- --template react
+  394  cd my-app
+  395  npm run dev
+  396  npm run dev
+  397  npm run dev
+  398  cd my-app
+  399  npm run dev
+  400  npm install
+  401  npm run dev
+  402  cd ..
+  403  cd ..
+  404  git add react-intro
+  405  git commit -m "Completed react-intro exercise."
+  406  git push origin react-intro
+  407  git switch main
+  408  git pull origin main
+  409  git branch react-jsx
+  410  git switch react-jsx
+  411  cd react-jsx
+  412  npm create vite@latest my-app -- --template react
+  413  cd my-app
+  414  npm install
+  415  npm run dev
+  416  cd ..
+  417  git add react-jsx
+  418  cd ..
+  419  git add react-jsx/
+  420  git commit -m "Completed react-jsx exercise."
+  421  git push origin react-jsx 
+  422  git switch main
+  423  git pull origin main
+  424  git branch react-components
+  425  git switch react-components 
+  426  cd react-components/
+  427  npm create vite@latest my-app -- --template react
+  428  cd my-app
+  429  npm install
+  430  npm run dev
+  431  cd ..
+  432  git add react-components
+  433  cd ..
+  434  git add react-components/
+  435  git commit -m "Completed react-components exercise."
+  436  git push origin react-components 
+  437  git switch main
+  438  git pull origin main
+  439  git branch react-props-and-expressions
+  440  git switch react-props-and-expressions 
+  441  cd react-props-and-expressions/
+  442  npm create vite@latest my-app -- --template react
+  443  cd my-app
+  444  npm install
+  445  npm run dev
+  446  cd ..
+  447  cd ..
+  448  git add react-props-and-expressions/
+  449  git commit -m "Completed react-props-and-expressions exercise."
+  450  git pish origin react-props-and-expressions/
+  451  git push origin react-props-and-expressions 
+  452  git switch main
+  453  git pull origin main
+  454  git branch react-events
+  455  git switch react-events 
+  456  cd react-events
+  457  npm create vite@latest my-app -- --template react
+  458  cd my-app
+  459  npm install
+  460  npm run dev
+  461  npm run dev
+  462  cd ..
+  463  cd ..
+  464  git add react-events/
+  465  git commit -m "Completed react-events exercise."
+  466  git add react-events
+  467  git commit -m "Completed react-events exercise."
+  468  git push origin react-events 
+  469  git switch main
+  470  git pull origin main
+  471  git branch react-state
+  472  git switch react-state
+  473  cd react-state
+  474  npm create vite@latest my-app -- --template react
+  475  cd my-app
+  476  npm install
+  477  npm run dev
+  478  cd react-state
+  479  npm run dev
+  480  npm run
+  481  npm run dev
+  482  npm dev
+  483  npm help
+  484  cd my-app
+  485  npm run dev
+  486  cd ..
+  487  cd ..
+  488  git switch main
+  489  git pull origin main
+  490  git switch react-events
+  491  git switch main
+  492  git pull origin main
+  493  git switch react-state
+  494  cd react state
+  495  cd react-state
+  496  cd my-app
+  497  npm install
+  498  npm run dev
+  499  git add react-state
+  500  git commit -m "react state commit"
+  501  git commit -m "react-state save"
+  502  git commit "react-state save"
+  503  git commit -m "react state save"
+  504  git commit -m "react state save"
+  505  git commit -m "react-states" --no-verify
+  506  git push origin react-state
+  507  git switch main
+  508  git commit --no-verify "react state save" 
+  509  git add react-state
+  510  git commit -m "react state save"
+  511  git commit -m "react state save" --no-verify
+  512  git switch main 
+  513  git pull origin main 
+  514  git pull origin main
+  515  git switch main 
+  516  git pull origin main
+  517  git branch command-line-basics
+  518  git switch command-line-basics 
+  519  git switch main
+  520  git pull origin main
+  521  git switch command-line-basics 
+  522  cd command-line-basics
+  523  man man
+  524  man man
+  525  man cat
+  526  man cat
+  527  man cat
+  528  cat laziness.txt
+  529  man cat
+  530  cat laziness.txt
+  531  cat laziness.txty
+  532  git switch main
+  533  cd ..
+  534  git switch main
+  535  git pull origin main
+  536  git switch command-line-basics
+  537  cd command-line-basics
+  538  man man
+  539  man cat
+  540  cat laziness.txt
+  541  cat impatience.txt
+  542  cat hubris.txt
+  543  laziness.txt impatience.txt hubris.txt
+  544  cat laziness.txt impatience.txt hubris.txt
+  545  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  546  cat three-virtues.txt
+  547  man cat
+  548  man ls
+  549  man s
+  550  man ls
+  551  la
+  552  ls
+  553  ls -a
+  554  ls -F
+  555  ls lfz-staff
+  556  ls -aF lfz-staff > lfz-staff/contents.txt
+  557  cat lfz-staff/contents.txt
+  558  man ls
+  559  man pwd
+  560  man pwd
+  561  pwd > i-was-here.txt
+  562  ls 
+  563  cat i-was-here.txt
+  564  man echo
+  565  echo 'Hello, World!'
+  566  echo 'Hello, World!' > hello.txt
+  567  ls
+  568  cat hello.txt
+  569  man touch
+  570  touch tag-youre-it.txt
+  571  touch snoot/boop.txt
+  572  ls snoot/
+  573  man mkdir
+  574  mkdir parent
+  575  ls parent/
+  576  la
+  577  ls
+  578  mkdir -p parent/child/grandchild
+  579  touch .gitkeep parent/child/grandchild
+  580  touch parent/child/grandchild/.gitkeep
+  581  ls -a
+  582  ls 
+  583  ls -a
+  584  man echo
+  585  man touch
+  586  ls -A
+  587  ls a
+  588  ls -a
+  589  man mkdir
+  590  man mv
+  591  man mv
+  592  mv pokiemans pokemon
+  593  ls
+  594  man rm
+  595  man lol.txt
+  596  rm lol.txt
+  597  rm -r kill-me/
+  598  man cp
+  599  cp and-then.txt no-and-then.txt
+  600  ls 
+  601  man history
+  602  history 
+  603  history > command-history.txt
