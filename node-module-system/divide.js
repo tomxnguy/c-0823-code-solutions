@@ -1,5 +1,3 @@
-function divide(x, y) {
+export default function divide(x, y) {
   return x / y;
 }
-
-export default divide;

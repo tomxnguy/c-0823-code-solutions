@@ -1,5 +1,3 @@
-function multiply(x, y) {
+export default function multiply(x, y) {
   return x * y;
 }
-
-export default multiply;
