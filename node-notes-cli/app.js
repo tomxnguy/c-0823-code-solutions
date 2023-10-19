@@ -2,7 +2,6 @@ import { writeFile, readFile } from 'node:fs/promises';
 
 const fileContent = await readFile('data.json', 'utf-8');
 const dataParse = JSON.parse(fileContent);
-console.log(dataParse);
 
 const action = process.argv[2];
 
