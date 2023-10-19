@@ -20,16 +20,19 @@ async function createData(newNote) {
   dataParse.notes[newId] = newNote;
   dataParse.nextId++;
   await writeNew();
+  await readData();
 }
 
 async function updateData(id, newNote) {
   dataParse.notes[id] = newNote;
   await writeNew();
+  await readData();
 }
 
 async function deleteData(id) {
   delete dataParse.notes[id];
   await writeNew();
+  await readData();
 }
 
 try {
