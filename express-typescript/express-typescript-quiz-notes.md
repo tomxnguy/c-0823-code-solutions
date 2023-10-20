@@ -11,7 +11,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   TypeScript is popular because it adds type safetype and is easier to write bug free code.
 
 - What is a convenient way to run an Express server written in TypeScript?
-  installing the typescript compiler and typescript node globally using node.
+  installing the typescript compiler and typescript node globally using node
 
 ## Notes
 
