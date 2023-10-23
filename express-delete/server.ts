@@ -41,7 +41,7 @@ app.get('/api/grades', (req, res) => {
 
 app.delete('/api/grades/:id', (req, res) => {
   const { id } = req.params;
-  if (!Number.isInteger(id)) {
+  if (!Number.isInteger(+id)) {
     res.status(400).json({ error: `${id} not an integer` });
     return;
   }
