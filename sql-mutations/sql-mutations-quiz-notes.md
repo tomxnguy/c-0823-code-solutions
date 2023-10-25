@@ -15,15 +15,19 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - How do you update rows in a database table?
   update clause followied by the table
-  and then set clause
+  and then set statement
 
 - How do you delete rows from a database table?
+  the delete statement. the 'from' clause.
 
 - Why is it important to include a `where` clause in your `update` and `delete` statements?
+  the where clause targets specific rows that we would want to delete.
 
 - How do you accidentally delete or update all rows in a table?
+  by deleting the table that we specified and not using the where clause.
 
 - How do you get back the modified row without a separate `select` statement?
+  the returning\* clause
 
 ## Notes
 
