@@ -5,14 +5,13 @@ type Note = {
   id: number;
   content: string;
 };
-
 type Data = {
   nextId: number;
-  notes: Record<number, Note>;
+  notes: Record<string, Note>;
 };
 
 const app = express();
-app.use(express.json);
+app.use(express.json());
 
 app.get('/api/notes', async (req, res) => {
   try {
@@ -24,59 +23,111 @@ app.get('/api/notes', async (req, res) => {
     res.json(notes);
   } catch (err) {
     console.error(err);
-    res.status(500).json({ error: 'An unexpected error occured' });
+    res.status(500).json({ error: 'an unexpected error occurred' });
   }
 });
 
-app.get('/api/notes:noteId', async (req, res) => {
-  const data = await readData();
-  const { noteId } = req.params;
-  res.json(data.notes[+noteId]);
+app.get('/api/notes/:id', async (req, res) => {
+  try {
+    const data = await readData();
+    const id = Number(req.params.id);
+    if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+      return;
+    }
+    if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+      return;
+    }
+    res.json(data.notes[id]);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'an unexpected error occurred' });
+  }
 });
 
-app.post('api/notes', async (req, res) => {
-  const data = await readData();
-  const { content } = req.body;
-  const newNote = {
-    id: data.nextId,
-    content,
-  };
-  data.notes[data.nextId++] = newNote;
-  await writeData(data);
-  res.json(newNote);
+app.post('/api/notes', async (req, res) => {
+  try {
+    const { content } = req.body;
+    if (content === undefined) {
+      res.status(400).json({ error: 'content is a required field' });
+      return;
+    }
+    const data = await readData();
+    const note = {
+      id: data.nextId,
+      content,
+    };
+    data.notes[note.id] = note;
+    data.nextId++;
+    await writeData(data);
+    res.status(201).json(note);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'an unexpected error occurred' });
+  }
 });
 
-app.put('api/notes/:noteId', async (req, res) => {
-  const data = await readData();
-  const { noteId } = req.params;
-  const { content } = req.body;
-  const note: Note = {
-    id: +noteId,
-    content,
-  };
-  data.notes[+noteId] = note;
-  await writeData(data);
-  res.json(note);
+app.delete('/api/notes/:id', async (req, res) => {
+  try {
+    const noteId = Number(req.params.id);
+    if (Number.isNaN(noteId) || !Number.isInteger(noteId) || noteId < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+      return;
+    }
+    const data = await readData();
+    if (data.notes[noteId] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${noteId}` });
+      return;
+    }
+    delete data.notes[noteId];
+    await writeData(data);
+    res.sendStatus(204);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'an unexpected error occurred' });
+  }
 });
 
-app.delete('api/notes/:noteId', async (req, res) => {
-  const data = await readData();
-  const { noteId } = req.params;
-  delete data.notes[+noteId];
-  await writeData(data);
-  res.sendStatus(204);
-});
-
-app.listen(8080, () => {
-  console.log('Express server listening on port 8080');
+app.put('/api/notes/:id', async (req, res) => {
+  try {
+    const id = Number(req.params.id);
+    if (Number.isNaN(id) || !Number.isInteger(id) || id < 1) {
+      res.status(400).json({ error: 'id must be a positive integer' });
+      return;
+    }
+    const { content } = req.body;
+    if (content === undefined) {
+      res.status(400).json({ error: 'content is a required field' });
+      return;
+    }
+    const data = await readData();
+    if (data.notes[id] === undefined) {
+      res.status(404).json({ error: `cannot find note with id ${id}` });
+      return;
+    }
+    const note = {
+      id,
+      content,
+    };
+    data.notes[note.id] = note;
+    await writeData(data);
+    res.json(note);
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'an unexpected error occurred' });
+  }
 });
 
 async function readData(): Promise<Data> {
-  const data = await readFile('data.json', 'utf-8');
-  return JSON.parse(data);
+  const data = await readFile('./data.json');
+  return JSON.parse(data.toString());
 }
 
-async function writeData(data: Data): Promise<void> {
-  const value = JSON.stringify(data, null, 2);
-  await writeFile('data.json', value, 'utf8');
+async function writeData(data: Data) {
+  await writeFile('./data.json', JSON.stringify(data, null, 2));
 }
+
+app.listen(8080, () => {
+  console.log(`express server listening on port 8080`);
+});
