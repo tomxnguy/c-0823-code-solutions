@@ -1,0 +1,15 @@
+.accordion-title {
+  border: solid;
+  border-color: white;
+  border-width: 1px;
+  width: 400px;
+  height: auto;
+}
+
+.accordion-content {
+  width: 400px;
+  border-width: 1px;
+  height: auto;
+  border: solid;
+  border-color: white;
+}
