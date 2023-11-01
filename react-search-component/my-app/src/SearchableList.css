@@ -1,0 +1,9 @@
+.wrapper {
+  flex-direction: wrap;
+  height: 4rem;
+  width: 6rem;
+}
+
+.search {
+  background-image: url('/search-solid.svg');
+}
