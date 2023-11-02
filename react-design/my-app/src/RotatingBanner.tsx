@@ -1,14 +1,26 @@
+import { CSSProperties, useState } from 'react';
+
 type Props = {
   items: string[];
 };
 
 export default function RotatingBanner({ items }: Props) {
+  const [showing, setShowing] = useState(0);
+
+  function handlePrevClick() {
+    setShowing((showing - 1 + items.length) % items.length);
+  }
+
+  function handleNextClick() {
+    setShowing((showing + 1 + items.length) % items.length);
+  }
+
   return (
     <>
-      <Banner item={items[0]} />
-      <Button text="Prev" />
-      <Indicators count={items.length} />
-      <Button text="Next" />
+      <Banner item={items[showing]} />
+      <Button text="Prev" onClick={handlePrevClick} />
+      <Indicators items={items} showing={showing} onSelect={setShowing} />
+      <Button text="Next" onClick={handleNextClick} />
     </>
   );
 }
@@ -23,24 +35,35 @@ function Banner({ item }: BannerProps) {
 
 type ButtonProps = {
   text: string;
+  style: CSSProperties;
+  onClick: () => void;
 };
 
-function Button({ text }: ButtonProps) {
-  return <button>{text}</button>;
+function Button({ text, style, onClick }: ButtonProps) {
+  return (
+    <button style={style} onClick={onClick}>
+      {text}
+    </button>
+  );
 }
 
 type IndicatorProps = {
-  count: number;
+  items: Props['items'];
+  showing: number;
+  onSelect: (index: number) => void;
 };
 
-function Indicators({ count }: IndicatorProps) {
-  const buttons = [];
-  for (let i = 0; i < count; i++) {
-    buttons.push(i);
-  }
-  return (
-    <div>
-      <button>{buttons}</button>
-    </div>
-  );
+function Indicators({ items, showing, onSelect }: IndicatorProps) {
+  const buttons = items.map((_, index) => (
+    <Button
+      key={index}
+      text={String(index)}
+      style={{
+        color: 'black',
+        backgroundColor: showing === index ? 'blue' : 'white',
+      }}
+      onClick={() => onSelect(index)}
+    />
+  ));
+  return <div>{buttons}</div>;
 }
