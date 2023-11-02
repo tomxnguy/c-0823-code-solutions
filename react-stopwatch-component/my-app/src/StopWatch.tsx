@@ -17,17 +17,21 @@ export default function StopWatch() {
   }
 
   return (
-    <div className="stopwatch">
+    <>
       <div
-        className="watch-face"
+        className="stopwatch"
         onClick={() => intervalId !== undefined && setElapsedTime(0)}>
-        <ElapsedTime time={elapsedTime} />
+        <div className="watch-face">
+          <ElapsedTime time={elapsedTime} />
+        </div>
       </div>
-      <PlayButton
-        isRunning={intervalId !== undefined}
-        onClick={handlePlayClick}
-      />
-    </div>
+      <div>
+        <PlayButton
+          isRunning={intervalId !== undefined}
+          onClick={handlePlayClick}
+        />
+      </div>
+    </>
   );
 }
 
@@ -36,13 +40,18 @@ type TimeProps = {
 };
 
 function ElapsedTime({ time }: TimeProps) {
-  return <div>{time}</div>;
+  return <div className="timer">{time}</div>;
 }
 
 type ButtonProps = {
   isRunning: boolean;
   onClick: () => void;
 };
+
 function PlayButton({ isRunning, onClick }: ButtonProps) {
-  return <div onClick={onClick}>{isRunning ? <FaPause /> : <FaPlay />}</div>;
+  return (
+    <div className="play-button" onClick={onClick}>
+      {isRunning ? <FaPause /> : <FaPlay />}
+    </div>
+  );
 }
