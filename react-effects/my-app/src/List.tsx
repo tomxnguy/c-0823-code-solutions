@@ -14,8 +14,8 @@ export function List() {
 
   useEffect(() => {
     readItems()
-      .then((data) => {
-        setItems(data);
+      .then((items) => {
+        setItems(items);
         setIsLoading(false);
       })
       .catch((error) => {
