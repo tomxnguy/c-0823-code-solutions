@@ -6,7 +6,7 @@ import './HomePage.css';
 
 export function HomePage() {
   /* TODO: Grab `user` from `AppContext` */
-  const user = undefined;
+  const { user } = useContext(AppContext);
   const navigate = useNavigate();
 
   useEffect(() => {
