@@ -1,6 +1,5 @@
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
-// import { BsCircleFill } from 'react-icons/bs';
 import { BsCircle } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 
@@ -16,12 +15,13 @@ export default function Carousel({ images }: Props) {
   }
 
   function handleNextClick() {
-    setActiveIndex((activeIndex + 1 + images.length) % images.length);
+    setActiveIndex((activeIndex + 1) % images.length);
   }
 
   useEffect(() => {
-    setInterval(handleNextClick, 3000);
-  });
+    const interval = setInterval(handleNextClick, 3000);
+    return clearInterval(interval);
+  }, []);
 
   return (
     <div>

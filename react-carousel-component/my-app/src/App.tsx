@@ -9,11 +9,7 @@ function App() {
     '/images/025.png',
     '/images/039.png',
   ];
-  return (
-    <>
-      <Carousel images={images} />
-    </>
-  );
+  return <Carousel images={images} />;
 }
 
 export default App;
