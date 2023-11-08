@@ -1,6 +1,6 @@
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
-import { BsCircleFill } from 'react-icons/bs';
+// import { BsCircleFill } from 'react-icons/bs';
 import { BsCircle } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
 
@@ -9,14 +9,14 @@ type Props = {
 };
 
 export default function Carousel({ images }: Props) {
-  const [index, setIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   function handlePrevClick() {
-    setIndex((index - 1 + images.length) % images.length);
+    setActiveIndex((activeIndex - 1 + images.length) % images.length);
   }
 
   function handleNextClick() {
-    setIndex((index + 1 + images.length) % images.length);
+    setActiveIndex((activeIndex + 1 + images.length) % images.length);
   }
 
   useEffect(() => {
@@ -27,10 +27,14 @@ export default function Carousel({ images }: Props) {
     <div>
       <div>
         <BsChevronLeft onClick={() => handlePrevClick()} />
-        <Banner srcimg={images[index]} />
+        <Banner srcimg={images[activeIndex]} />
         <BsChevronRight onClick={() => handleNextClick()} />
       </div>
-      <Indicators />
+      <Indicators
+        images={images}
+        activeIndex={activeIndex}
+        onSelect={setActiveIndex}
+      />
     </div>
   );
 }
@@ -43,14 +47,19 @@ function Banner({ srcimg }: BannerProp) {
   return <img src={srcimg} />;
 }
 
-function Indicators() {
-  return (
-    <div>
-      <BsCircleFill />
-      <BsCircle />
-      <BsCircle />
-      <BsCircle />
-      <BsCircle />
-    </div>
-  );
+type IndicatorProps = {
+  images: Props['images'];
+  activeIndex: number;
+  onSelect: (index: number) => void;
+};
+
+function Indicators({ images, activeIndex, onSelect }: IndicatorProps) {
+  const buttons = images.map((_, index) => (
+    <BsCircle
+      key={index}
+      style={{ backgroundColor: activeIndex === index ? 'white' : '' }}
+      onClick={() => onSelect(index)}
+    />
+  ));
+  return <div>{buttons}</div>;
 }
