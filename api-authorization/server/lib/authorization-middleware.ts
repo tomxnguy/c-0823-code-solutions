@@ -14,7 +14,7 @@ export function authMiddleware(
   if (!auth) {
     throw new ClientError(401, 'authorization required');
   }
-  const token = auth.split('Bearer')[1];
+  const token = auth.split('Bearer ')[1];
   if (!token) {
     throw new ClientError(401, 'authorization required');
   }
