@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { fetchProduct, type Product, toDollars } from '../lib';
 import './ProductDetails.css';
+import { Link, useParams } from 'react-router-dom';
 
 export function ProductDetails() {
   // TODO: Retrieve productId from the route
-  const productId = undefined;
+  const { productId } = useParams();
   const [product, setProduct] = useState<Product>();
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<unknown>();
@@ -42,26 +43,26 @@ export function ProductDetails() {
         <div className="card-body">
           <div className="row">
             <div className="col">
-              <div className="btn text-secondary">
+              <Link className="btn text-secondary" to="/">
                 {/* TODO: Instead of a div, the above should link to `/` */}
                 &lt; Back to catalog
-              </div>
+              </Link>
             </div>
           </div>
-          <div className="row mb-4">
-            <div className="col-12 col-sm-6 col-md-5">
-              <img src={imageUrl} alt={name} className="image" />
-            </div>
-            <div className="col-12 col-sm-6 col-md-7">
-              <h2>{name}</h2>
-              <h5 className="text-secondary">{toDollars(price)}</h5>
-              <p>{shortDescription}</p>
-            </div>
+        </div>
+        <div className="row mb-4">
+          <div className="col-12 col-sm-6 col-md-5">
+            <img src={imageUrl} alt={name} className="image" />
           </div>
-          <div className="row">
-            <div className="col">
-              <p className="long-description">{longDescription}</p>
-            </div>
+          <div className="col-12 col-sm-6 col-md-7">
+            <h2>{name}</h2>
+            <h5 className="text-secondary">{toDollars(price)}</h5>
+            <p>{shortDescription}</p>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col">
+            <p className="long-description">{longDescription}</p>
           </div>
         </div>
       </div>

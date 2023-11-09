@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { fetchCatalog, type Product, toDollars } from '../lib';
 import './Catalog.css';
+import { Link } from 'react-router-dom';
 
 export function Catalog() {
   const [products, setProducts] = useState<Product[]>();
@@ -52,7 +53,9 @@ type CardProps = {
 function ProductCard({ product }: CardProps) {
   const { productId, name, price, imageUrl, shortDescription } = product;
   return (
-    <div className="product text-dark card mb-4 shadow-sm text-decoration-none">
+    <Link
+      className="product text-dark card mb-4 shadow-sm text-decoration-none"
+      to={`details/${productId}`}>
       {/* TODO: Instead of a div, the above should link to `/details/:productId` */}
       <img src={imageUrl} className="image card-img-top" alt={name} />
       <div className="card-body">
@@ -60,6 +63,6 @@ function ProductCard({ product }: CardProps) {
         <p className="card-text text-secondary">{toDollars(price)}</p>
         <p className="description card-text">{shortDescription}</p>
       </div>
-    </div>
+    </Link>
   );
 }
