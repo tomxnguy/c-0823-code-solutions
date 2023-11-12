@@ -1,7 +1,7 @@
 import { BsChevronLeft } from 'react-icons/bs';
 import { BsChevronRight } from 'react-icons/bs';
 import { BsCircle } from 'react-icons/bs';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 type Props = {
   images: string[];
@@ -10,25 +10,27 @@ type Props = {
 export default function Carousel({ images }: Props) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  function handlePrevClick() {
-    setActiveIndex((activeIndex - 1 + images.length) % images.length);
-  }
+  const nextClick = useCallback(() => {
+    const nextIndex = (activeIndex + 1) % images.length;
+    setActiveIndex(nextIndex);
+  }, [images, activeIndex]);
 
-  function handleNextClick() {
-    setActiveIndex((activeIndex + 1) % images.length);
-  }
+  const prevClick = useCallback(() => {
+    const prevIndex = (activeIndex - 1 + images.length) % images.length;
+    setActiveIndex(prevIndex);
+  }, [images, activeIndex]);
 
   useEffect(() => {
-    const interval = setInterval(handleNextClick, 3000);
-    return clearInterval(interval);
-  }, []);
+    const timeoutHandle = setTimeout(nextClick, 3000);
+    return () => clearTimeout(timeoutHandle);
+  }, [nextClick]);
 
   return (
     <div>
       <div>
-        <BsChevronLeft onClick={() => handlePrevClick()} />
+        <BsChevronLeft onClick={() => prevClick()} />
         <Banner srcimg={images[activeIndex]} />
-        <BsChevronRight onClick={() => handleNextClick()} />
+        <BsChevronRight onClick={() => nextClick()} />
       </div>
       <Indicators
         images={images}
