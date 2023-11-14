@@ -6,12 +6,15 @@ export function getFront<T>(queue: Queue<T>): T | undefined {
   return frontElement !== undefined ? frontElement : undefined;
 }
 
-export function addToBack<T>(queue: Queue<T>, value: T): void {}
+export function addToBack<T>(queue: Queue<T>, value: T): void {
+  queue.enqueue(value);
+}
 
 export function takeFront<T>(queue: Queue<T>): T | undefined {
-  return undefined;
+  const takeFront = queue.dequeue();
+  return takeFront !== undefined ? takeFront : undefined;
 }
 
 export function isEmpty<T>(queue: Queue<T>): boolean {
-  return false;
+  return queue.peek() === undefined;
 }
