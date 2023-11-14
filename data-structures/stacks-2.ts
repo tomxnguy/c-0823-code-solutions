@@ -1,7 +1,11 @@
 import { Stack } from './lib/stack';
 
 export function countValues<T>(stack: Stack<T>): number {
-  return 0;
+  for (let i = 0; i < stack.length; i++) {
+    const items = [];
+    items.push();
+  }
+  return items.length;
 }
 
 export function maxValue(stack: Stack<number>): number {
