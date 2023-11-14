@@ -9,7 +9,7 @@ export function evenNumbers(numbers: number[]): number[] {
  * Returns a number formatted in dollars and cents.
  */
 export function toDollars(amount: number): string {
-  return `$${amount}.00`;
+  return `$${amount.toFixed(2)}`;
 }
 
 /**
@@ -32,13 +32,10 @@ export function multiplyBy(
   obj: Record<string, unknown>,
   multiplier: number
 ): Record<string, unknown> {
-  const result: Record<string, unknown> = {};
   Object.entries(obj).forEach(([key, value]) => {
     if (typeof value === 'number') {
-      result[key] = Number(value) * multiplier;
-    } else {
-      result[key] = value;
+      obj[key] = Number(value) * multiplier;
     }
   });
-  return result;
+  return obj;
 }
